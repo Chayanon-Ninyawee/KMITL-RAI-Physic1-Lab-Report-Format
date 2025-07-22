@@ -1,0 +1,28 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Editors and OS-specific files
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# Output files (optional, uncomment if desired)
+# *.pdf
+
+# latexmk specific
+latexmkrc
