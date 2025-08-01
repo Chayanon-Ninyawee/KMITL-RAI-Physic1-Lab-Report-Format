@@ -1,60 +1,71 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
-\usepackage{mathptmx}
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
 \usepackage{graphicx}
-\usepackage{setspace}
-\usepackage{color,xcolor}
-\usepackage{titlesec}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
 \usepackage{tikz}
 \usetikzlibrary{calc}
-\usepackage{fancyhdr}
-\usepackage{ulem}
-\usepackage{enumitem}
-\pagestyle{empty}
+\usepackage{atbegshi}
 
-\usepackage{everypage} % for adding tikz on every page
+% Remove page numbers
+\pagenumbering{gobble}
 
-\AddEverypageHook{%
-  \begin{tikzpicture}[remember picture, overlay]
-    \draw[line width=1pt]
-      ($(current page.north west) + (0.5in,-0.5in)$) rectangle
-      ($(current page.south east) + (-0.5in,0.5in)$);
-  \end{tikzpicture}%
+% Draw border on every page
+\AtBeginShipout{%
+    \AtBeginShipoutUpperLeft{%
+        \begin{tikzpicture}[remember picture, overlay]
+        \draw[line width=1pt]
+            ($(current page.north west) + (0.5in,-0.5in)$) rectangle
+            ($(current page.south east) + (-0.5in,0.5in)$);
+        \end{tikzpicture}%
+    }%
 }
 
+% Set section font size to 14
 \usepackage{sectsty}
 \sectionfont{\fontsize{14}{16}\selectfont}
 
-\usepackage[style=apa, backend=biber]{biblatex} % APA style example
-\addbibresource{references.bib} % point to your .bib file
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{references.bib}
+
+% === User-defined Variables ===
+\newcommand{\groupNumber}{(Group no.)} % TODO: Put the group number
+\newcommand{\labTitle}{(LAB TITLE HERE)} % TODO: Add Lab Title
+\newcommand{\studentNames}{(PUT ONLY FIRST NAME HERE)} % TODO: Add First Names e.g. Supun,Ashan,Nalan,James
+\newcommand{\sessionDate}{00/00/0000} % TODO: Add Date of Session
+\newcommand{\submissionDate}{00/00/0000} % TODO: Add Date of Submission
+
 
 \begin{document}
 
 \begin{center}
-	\noindent\hfill\textbf{LAB SESSION - 00}  % TODO: Add Lab Session
 	\vspace*{36pt}
 
 	{\fontsize{14}{16}\selectfont
 		KING MONGKUT’S INSTITUTE OF TECHNOLOGY LATKRABANG\\
 		SCHOOL OF ENGINEERING\\
-		DEPARTMENT OF ROBOTICS\&AI ENGINEERING\\
+		ENGINEERING GROUP OF RAI \groupNumber
 	}
 
 	\vspace{42pt}
 
-	\includegraphics[width=0.4\textwidth]{kmitl_logo.png}\\
+	\includegraphics[width=0.4\textwidth]{kmitl_logo.png}
 
 	\vspace{56pt}
 
 	{\fontsize{16}{18}\selectfont
-		\underline{01006702– PHYSICS - I LABORATORY}\\
+		\underline{01006702 – PHYSICS - I LABORATORY}\\
 	}
 
 	\vspace{32pt}
 
-	\begin{center}
-		(LAB TITLE HERE)  % TODO: Add Lab Title
-	\end{center}
+	\labTitle
 
 	\vspace{60pt}
 
@@ -65,74 +76,64 @@
 	\vfill
 
 	\begin{flushright}
-		\parbox{8cm}{\textbf{NAME:} (PUT ONLY FIRST NAME HERE)}\\  % TODO: Add First Names e.g. Supun,Ashan,Nalan,James
-		\parbox{8cm}{\textbf{GROUP NO:} (Group no.)}\\  % TODO: Add Group Number
-		\parbox{8cm}{\textbf{DATE OF SES.:} 00/00/0000}\\  % TODO: Add Date of Session
-		\parbox{8cm}{\textbf{DATE OF SUB.:} 00/00/0000}  % TODO: Add Date of Submission
+		\parbox{8cm}{\textbf{Name:} \studentNames}\\
+		\parbox{8cm}{\textbf{Group No:} \groupNumber}\\
+		\parbox{8cm}{\textbf{Date of Session:} \sessionDate}\\
+		\parbox{8cm}{\textbf{Date of Submission:} \submissionDate}
 	\end{flushright}
 
 	\vspace{36pt}
-
 \end{center}
 
 \newpage
 
 \section*{1. Purpose}
-
-Objective of your experiment: Write in point form (Please refer to the example)
+\input{sections/1-purpose.tex}
 
 
 \section*{2. Summary of Theory}
-
-Summarize the Physics concepts (Henderson, n.d.) you have used in the lab – Write in point form
+\input{sections/2-theory.tex}
 
 
 \section*{3. Pre-Lab Exercises}
-
-Complete the Pre-Lab exercises if you are given any in the lab sheet
+\input{sections/3-prelab-exercises.tex}
 
 
 \section*{3.1. Exercises}
-
-Complete the Exercises if you are given any in the lab sheet
+\input{sections/3.1-exercises.tex}
 
 
 \section*{4. Procedure}
-
-Write your procedure
+\input{sections/4-procedure.tex}
 
 
 \section*{5. Observations}
-
-Write your Observations of the experiment in point form. Refer the example Lab
+\input{sections/5-observations.tex}
 
 
 \section*{5.1. Results}
-
-Show the Results of your Experiment
+\input{sections/5.1-results.tex}
 
 
 \section*{5.2. Calculations}
-
-Example Calculation if any
+\input{sections/5.2-calculations.tex}
 
 
 \section*{6. Conclusion}
-
-Conclude your lab experiment using the results
+\input{sections/6-conclusion.tex}
 
 
 \section*{7. Discussion}
+\input{sections/7-discussion.tex}
 
-Write a point form discussion base on your observations, facts from theory and Recommendations for the lab experiment
 
-
-% TODO: REMOVE THIS PLACEHOLDER CITE
-\section*{X. REMOVE THIS PLACEHOLDER CITE}
-This is a citation for a book \parencite{Doe2020}, an article \parencite{Smith2021}, and a website \parencite{Website2022}.
+% TODO: Remove this no cite
+% Instead use \parencite{source_name} to cite it properly and then it will be in the References
+\nocite{*}
 
 \newpage
-\printbibliography[title={References}]
+{\sloppy
+	\printbibliography[title={\textcolor{blue}{References}}]
+}
 
 \end{document}
-

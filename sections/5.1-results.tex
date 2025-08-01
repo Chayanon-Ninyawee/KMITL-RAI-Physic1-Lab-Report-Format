@@ -1,0 +1,72 @@
+Show the Results of your Experiment
+
+% NOTE: Example data table — replace with your actual results
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Trial No. & Mass (kg) & Acceleration (m/s\textsuperscript{2}) & Force (N) \\ \hline
+		1         & 2.0       & 3.5                                   & 7.0       \\ \hline
+		2         & 3.0       & 2.8                                   & 8.4       \\ \hline
+		3         & 4.0       & 2.5                                   & 10.0      \\ \hline
+		4         & 5.0       & 2.0                                   & 10.0      \\ \hline
+		5         & 6.0       & 1.8                                   & 10.8      \\ \hline
+	\end{tabular}
+	\caption{Example experimental results of force versus acceleration for different masses.}
+	\label{tab:example_results}
+\end{table}
+
+% NOTE: You can reference this table in text like this:
+As shown in Table~\ref{tab:example_results}, force varies linearly with acceleration for different masses.
+
+\vspace{12pt}
+
+% NOTE: You can use website like https://www.tablesgenerator.com/latex_tables to generate table from excel for you
+% and it look like this
+% NOTE: You need to select scale table to column width 
+% NOTE: You need to select caption below (or above) if you want to have label and caption 
+% NOTE: You need to add [h!] by yourself
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[h!]
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{|l|l|cccc|c|c|c|c|}
+			\hline
+			\multicolumn{1}{|c|}{Measurement} & \multicolumn{1}{c|}{Measurement} & \multicolumn{4}{c|}{Measurement Value} & Uncertainty                                      & Final Measurement                                & Precision                   & Accuracy                                                                                                              \\ \hline
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{49.92}                       & \multicolumn{1}{c|}{49.98}                       & 49.9                        & 0.04                        & 49.93                       & 0.08\%                      & 0.14\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  & \multirow{-3}{*}{Diameter}       & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{2-10}
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{9.82}                        & \multicolumn{1}{c|}{9.8}                         & 9.82                        & 0.01                        & 9.81                        & 0.10\%                      & 1.87\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{10.46}                       & \multicolumn{1}{c|}{10.46}                       & 10.36                       & 0.05                        & 10.43                       & 0.48\%                      & 4.30\%                      \\ \cline{3-10}
+			\multirow{-6}{*}{Acrylic Disk}    & \multirow{-3}{*}{Thickness}      & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{9.96}                        & \multicolumn{1}{c|}{9.91}                        & 9.85                        & 0.06                        & 9.91                        & 0.61\%                      & 0.90\%                      \\ \hline
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{15.9}                        & \multicolumn{1}{c|}{15.9}                        & 15.92                       & 0.01                        & 15.91                       & 0.06\%                      & 0.58\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{16.48}                       & \multicolumn{1}{c|}{16.49}                       & 16.49                       & 0.005                       & 16.487                      & 0.03\%                      & 3.04\%                      \\ \cline{3-10}
+			\multirow{-3}{*}{Metal Sphere}    & \multirow{-3}{*}{Diameter}       & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \hline
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{67.66}                       & \multicolumn{1}{c|}{67.7}                        & 67.72                       & 0.03                        & 67.69                       & 0.04\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  & \multirow{-3}{*}{Length}         & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{67.75}                       & \multicolumn{1}{c|}{67.73}                       & 67.73                       & 0.01                        & 67.74                       & 0.01\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{2-10}
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{22.2}                        & \multicolumn{1}{c|}{22.1}                        & 22.2                        & 0.05                        & 22.17                       & 0.23\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{22.26}                       & \multicolumn{1}{c|}{22.34}                       & 22.24                       & 0.05                        & 22.28                       & 0.22\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  & \multirow{-3}{*}{Width}          & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{22.17}                       & \multicolumn{1}{c|}{22.1}                        & 22.11                       & 0.04                        & 22.13                       & 0.18\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{2-10}
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{14.82}                       & \multicolumn{1}{c|}{14.84}                       & 14.92                       & 0.05                        & 14.86                       & 0.34\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{14.87}                       & \multicolumn{1}{c|}{14.87}                       & 14.96                       & 0.05                        & 14.90                       & 0.34\%                      & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			\multirow{-9}{*}{Wooden Block}    & \multirow{-3}{*}{Thickness}      & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{14.93}                       & \multicolumn{1}{c|}{14.9}                        & 14.92                       & 0.01                        & 14.92                       & 0.07\%                      & \cellcolor[HTML]{FF0000}N/A \\ \hline
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{17.98}                       & \multicolumn{1}{c|}{18.06}                       & 18.04                       & 0.04                        & 18.03                       & 0.22\%                      & 0.17\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			                                  & \multirow{-3}{*}{Inner Diameter} & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{2-10}
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{c|}{21.92}                       & \multicolumn{1}{c|}{21.96}                       & 21.94                       & 0.02                        & 21.94                       & 0.09\%                      & 0.27\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{22.4}                        & \multicolumn{1}{c|}{22.41}                       & 22.47                       & 0.04                        & 22.43                       & 0.18\%                      & 1.95\%                      \\ \cline{3-10}
+			                                  & \multirow{-3}{*}{Outer Diameter} & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{2-10}
+			                                  &                                  & \multicolumn{1}{c|}{VC}                & \multicolumn{1}{r|}{2.06}                        & \multicolumn{1}{r|}{1.96}                        & \multicolumn{1}{r|}{1.98}   & 0.05                        & 2.00                        & 2.50\%                      & 0.00\%                      \\ \cline{3-10}
+			                                  &                                  & \multicolumn{1}{c|}{MM}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \cline{3-10}
+			\multirow{-9}{*}{PVC Pipe}        & \multirow{-3}{*}{Thickness}      & \multicolumn{1}{c|}{HG}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \multicolumn{1}{c|}{\cellcolor[HTML]{FF0000}N/A} & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A & \cellcolor[HTML]{FF0000}N/A \\ \hline
+		\end{tabular}%
+	}
+	\caption{Example table from lab 1}
+	\label{tab:my-table}
+\end{table}
